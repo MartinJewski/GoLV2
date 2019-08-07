@@ -97,10 +97,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="pic 1.png" />
-    <Resource Include="pic 1_evo_step14.png" />
-    <Resource Include="pic 1_evo_step2.png" />
-    <Resource Include="pic 1_evo_step6.png" />
+    <Resource Include="pic_1.png" />
+    <Resource Include="pic_1_evo_step14.png" />
+    <Resource Include="pic_1_evo_step2.png" />
+    <Resource Include="pic_1_evo_step6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
