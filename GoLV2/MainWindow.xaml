@@ -1,0 +1,109 @@
+﻿<Window x:Class="GoLV2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+        xmlns:local="clr-namespace:GoLV2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="573" Width="800" ResizeMode="NoResize"
+        Loaded="Window_Loaded">
+    <Grid Margin="0,0,0,0"
+          Name="MainGrid">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto" MinHeight="36" />
+            <RowDefinition Height="382" />
+            <RowDefinition Height="110" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*" ></ColumnDefinition>
+            <ColumnDefinition Width="307*" ></ColumnDefinition>
+            <ColumnDefinition Width="30*" ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Row="2" 
+                 Grid.Column="1" 
+                 x:Name="tbMultiLine"
+                 TextWrapping="Wrap"
+                 AcceptsReturn="True"
+                 VerticalScrollBarVisibility="Visible" Margin="444,10,8,10" Text="Please insert how many rows and columns you want and press new to generate a new map.&#xD;&#xA;Mark cells by clicking on them and than use the&quot;Start Evolution&quot; button generate a new evolution." RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.233"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.329"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+
+        <Button
+            Name="NewButton"
+            Grid.Row="2"
+            Grid.Column="1" Margin="10,10,560,69"
+            Click="OnNew">
+            <TextBlock>New</TextBlock>
+        </Button>
+
+        <Border 
+                Grid.Row="1" Grid.Column="1"
+                BorderBrush="Black" 
+                BorderThickness="2">
+            <Canvas 
+                Name = "MainCanvas"
+                Grid.Row="1"
+                Grid.Column="1">
+                <!--TODO:Buttons for cells, click can change live status, color  displays live status -->
+            </Canvas>
+        </Border>
+
+        <TextBox
+                Name="txtMyText1" 
+                Grid.Row="2"
+                Grid.Column="1"
+                RenderTransformOrigin="2.6,0.598" 
+                Margin="157,8,461,71"
+                MaxLength="2"
+                PreviewKeyDown="TextBox_PreviewKeyDown"
+                PreviewTextInput="TextBox_PreviewTextInput"
+                LostFocus="TextBox_LostFocus" TextChanged="txtMyText1_TextChanged">
+        </TextBox>
+        <TextBox
+                Name="txtMyText2" 
+                Grid.Row="2"
+                Grid.Column="1"
+                RenderTransformOrigin="2.6,0.598" 
+                Margin="267,8,351,71"
+                MaxLength="2"
+                PreviewKeyDown="TextBox_PreviewKeyDown"
+                PreviewTextInput="TextBox_PreviewTextInput"
+                LostFocus="TextBox_LostFocus">
+        </TextBox>
+
+        <TextBlock 
+            Name="TextBlock1" 
+            Height="30"  
+            Text="Rows:" 
+            Foreground="Red"
+            Grid.Row="2"
+            Grid.Column="1" Margin="120,10,512,71">
+        </TextBlock>
+        <TextBlock 
+            Name="TextBlock2" 
+            Height="30"  
+            Text="Columns:" 
+            Foreground="Red"
+            Grid.Row="2"
+            Grid.Column="1" Margin="208,8,402,73">
+        </TextBlock>
+        <Button
+            x:Name="EvolveButton"
+            Grid.Row="2"
+            Grid.Column="1" Margin="340,8,230,71"
+            Click="OnStartEvolve">
+            <TextBlock><Run Text="Start Evolution"/></TextBlock>
+        </Button>
+
+    </Grid>
+
+</Window>
