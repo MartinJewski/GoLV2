@@ -5,11 +5,11 @@ A simple implementation of conway's game of life yousing the standart ruleset
 Down below you see a simple input:
 
 Random picture(start):
-![stack Overflow](https://github.com/MartinJewski/GoLV2/blob/master/GoLV2/pic_1.png)
+![stack Overflow](https://github.com/MartinJewski/GoLV2/blob/master/GoLV2/pic_1.png) \n
 second generation:
-![stack Overflow](https://github.com/MartinJewski/GoLV2/blob/master/GoLV2/pic_1_evo_step2.png)
+![stack Overflow](https://github.com/MartinJewski/GoLV2/blob/master/GoLV2/pic_1_evo_step2.png) \n
 few generations later:
-![stack Overflow](https://github.com/MartinJewski/GoLV2/blob/master/GoLV2/pic_1_evo_step6.png)
+![stack Overflow](https://github.com/MartinJewski/GoLV2/blob/master/GoLV2/pic_1_evo_step6.png) \n
 few generations later:
-![stack Overflow](https://github.com/MartinJewski/GoLV2/blob/master/GoLV2/pic_1_evo_step14.png)
+![stack Overflow](https://github.com/MartinJewski/GoLV2/blob/master/GoLV2/pic_1_evo_step14.png) \n
 
